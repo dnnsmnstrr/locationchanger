@@ -9,7 +9,7 @@ APP_SUPPORT_DIR="$HOME/.locations" #/Library/Application Support/LocationChanger
 sudo -v
 
 echo "Copying script and making it executable"
-sudo cat "$SCRIPT_NAME" | sed -e 's%$HOME%'$HOME'%g' -e 's%${HOME}%'$HOME'%g' > "$INSTALL_DIR"
+sudo cat "$SCRIPT_NAME" | sed -e 's%$HOME%'$HOME'%g' -e 's%${HOME}%'$HOME'%g' > "$INSTALL_DIR/$SCRIPT_NAME"
 
 sudo chmod +x ${SCRIPT_NAME}
 
