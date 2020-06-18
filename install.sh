@@ -11,7 +11,7 @@ sudo -v
 echo "Copying script and making it executable"
 sudo cat "$SCRIPT_NAME" | sed -e 's%$HOME%'$HOME'%g' -e 's%${HOME}%'$HOME'%g' > "$INSTALL_DIR/$SCRIPT_NAME"
 
-sudo chmod +x ${SCRIPT_NAME}
+sudo chmod +x "$INSTALL_DIR/${SCRIPT_NAME}"
 
 # generate a default config file if it doesn't exists
 function copyConfig() {
